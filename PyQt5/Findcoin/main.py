@@ -40,7 +40,7 @@ class main(QWidget):
         self.setUi()
         self.setSlot()
 
-    def setUi(self):
+    def setUi(self):333333
         self.setWindowTitle(("불량 동전 찾기"))
         self.setGeometry(300, 300, 500, 400)
         for i in range(8):
