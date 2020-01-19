@@ -23,11 +23,11 @@ class main(QWidget):
         self.tv.setModel(self.model)
         self.model.setHorizontalHeaderLabels(self.year)
         self.model.setVerticalHeaderLabels(self.month)
-        vbox = QVBoxLayout()
-        vbox.addWidget(self.btnRnd)
-        vbox.addWidget(self.btnClass)
-        vbox.addWidget(self.tv)
-        self.setLayout(vbox)
+        self.vbox = QVBoxLayout()
+        self.vbox.addWidget(self.btnRnd)
+        self.vbox.addWidget(self.btnClass)
+        self.vbox.addWidget(self.tv)
+        self.setLayout(self.vbox)
 
     def setSlot(self):
         self.btnRnd.clicked.connect(self.rndCrtFile)
