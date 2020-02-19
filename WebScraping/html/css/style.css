@@ -1,0 +1,12 @@
+td {
+	color: blue;
+	font-size:2em;
+	font-family: Gulim;
+	text-align: center;
+}
+
+.highlight{
+	font-size:3em;
+	text-align: right;
+	color:blue;
+}

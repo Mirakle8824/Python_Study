@@ -1,0 +1,92 @@
+/*
+ * Function.c
+ *
+ *  Created on: 2020. 1. 13.
+ *      Author: 82109
+ */
+
+#include "stm32f2xx.h"
+#include "ps14.h"
+#include "Function.h"
+
+
+void value_init(void)
+{
+	Simmer_Ready_En(OFF);
+	Lamp_Trigger_En(OFF);
+	Ld_Driver_En(OFF);
+	Simmer_Start_En(OFF);
+	Simmer_Start(OFF);
+	Mo_Shutter(OFF);
+	Safety_Shutter(OFF);
+	Mode.Simmer = RESET;
+	Mode.MainWaterFlow = MainWaterFlow_Normal;
+	Mode.MainWaterLevel = MainWaterLevel_Normal;
+	Mode.MoWaterLevel = MoWaterLevel_Normal;
+	Mode.Emergency = Emergency_Normal;
+	Mode.Mosec = MOSECURITY_NORMAL;
+	Mode.Foot = 10;
+	Count.Cal_Periodic_Transmit = 21500;
+	Count.Psc_Periodic_Transmit = 500;
+	Count.Pc_Periodic_Transmit = 1000;
+	Count.Ctr_Periodic_Transmit = 700;
+	Count.Temp_Periodic_Transmit = 0;
+	Count.ErrorCheckStart = RESET;
+	Flag.Old_KeySwitch = RESET;
+	Flag.SystemOffCmd = RESET;
+	Flag.Head_Position = RESET;
+	Flag.AutoStandby = RESET;
+	Flag.WaterTempCnt = RESET;
+	Flag.HeadTempCnt = RESET;
+	Flag.SystemCheckStart = RESET;
+	Uart.Pc_on = SET;
+	Flag.Gui_Off = RESET;
+	Flag.Simmer_Trg_Start = RESET;
+	Flag.Call_PscVersion = RESET;
+	Flag.Call_TempVersion = RESET;
+	Flag.Send_SystemVersion = RESET;
+	Flag.Send_PscVersion = RESET;
+	Flag.Send_TempVersion = RESET;
+	Flag.Order_LdTec = SET;
+	Flag.Order_MoTec = SET;
+	Flag.Order_Ktp = SET;
+	Flag.Order_AcFan = SET;
+	Flag.Order_MO2 = SET;
+	Flag.Order_HeadBase = SET;
+	Flag.Order_MOBase = SET;
+	Flag.Feedback_LdTec = RESET;
+	Flag.Feedback_MoTec = RESET;
+	Flag.Feedback_Ktp = RESET;
+	Flag.Feedback_AcFan = RESET;
+
+	Flag.TempAutoResponse = RESET;
+	Flag.FeedBack_Setpoint = 5;
+	Uart.Set_Ld_Temp = 250;
+	Uart.Set_Mo_Temp = 400;
+	Uart.Set_Mo2_Temp = 400;
+	Uart.Set_Ktp_Temp = 400;
+	Uart.Set_Head_Temp = 260;
+	Uart.Set_MoBase_Temp = 350;
+
+	Ext_Calibration = RESET;
+	Old_HandPieceSpotSIze = 100;
+	Flag.SafetyShutterOpen = RESET;
+	Flag.FeedBackHandPieceDA = RESET;
+	Flag.MOSECURITY = RESET;
+	Flag.SimmerOkGoStandby = RESET;
+	Flag.System_Init = RESET;
+	Flag.AskCalMo = SET;
+	Flag.MOSECURITYCLEAR = RESET;
+	Count.Fail_ShutterVolt = RESET;
+	HandPieceAdCtl(OFF);
+	Flag.DummypumpingStart = RESET;
+	Flag.DummypumpingEnd = RESET;
+	Flag.Dummypuming = RESET;
+	Flag.Mo2Temp = RESET;
+	Flag.HeadTempMin = RESET;
+	Flag.MoBaseTempMin = RESET;
+	Flag.Send_AutoResponse = SET;
+	Flag.READY_INIT = RESET;
+
+
+}
